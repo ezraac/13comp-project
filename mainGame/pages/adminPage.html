@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>13COMP assessment</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="13COMP assessment">
+  <meta name="author" content="?????">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/assets/images/dtec_favicon.PNG">
+
+  <!-- stylesheets *******************************************-->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- P5.js & P5.play ***************************************-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+  <script src="https://p5play.org/v3/planck.min.js"></script>
+  <script src="https://p5play.org/v3/p5play.js"></script>
+
+  <!-- firebase start ****************************************-->
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+  <!-- Firebase App (core Firebase SDK) always required & must be listed 1st -->
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+  <!-- firebase end ******************************************-->
+
+  <!-- JQUERY ************************************************-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Your modules ******************************************-->
+  <script defer src="../data.js"></script>
+  <script defer src="../modules/fb_io.js"></script>
+  <script defer src="../src/html_manager.js"></script>
+  <script defer src="../modules/ad_manager.js"></script>
+
+</head>
+<section id="s_adminPage" class="w3-grey">
+  <div class="w3-row">
+    <div class="w3-container w3-grey w3-col m10">
+      <h1 class="w3-wide">Admin page</h1>
+    </div>
+  </div>
+
+  <!--home button-->
+  <nav id="n_admin" class="w3-bar stickyNav">
+    <button id="b_adHome" class="w3-button w3-block w3-col m3 
+                                   w3-medium w3-ripple w3-border" onclick="ad_home()" value="Submit">home
+    </button>
+    <!--users button-->
+    <button id="b_adUser" class="w3-button w3-block w3-col m3 
+                                   w3-medium w3-ripple w3-small w3-border" onclick="ad_user()" value="Submit">users
+    </button>
+    <!--game data button-->
+    <button id="b_adPTB" class="w3-button w3-block w3-col m3 
+                                 w3-medium w3-ripple w3-small w3-border" onclick="ad_Game()" value="Submit">game data
+    </button>
+  </nav>
+
+  <!--table showing data -->
+  <div>
+    <div id="d_admin" class="w3-table-all w3-small w3-light-grey 
+                               w3-hoverable w3-border w3-bordered content">
+      <table id="t_userData" class="w3-text-black"></table>
+    </div>
+  </div>
+  </body>
+
+</html>
